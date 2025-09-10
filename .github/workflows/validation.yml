@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Install PowerShell
       shell: bash
@@ -48,7 +48,7 @@ jobs:
         os: [windows-latest, ubuntu-latest, macos-latest]
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -93,7 +93,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Setup Git
       run: |
@@ -146,7 +146,7 @@ jobs:
         os: [windows-latest, ubuntu-latest, macos-latest]
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Install PowerShell (Linux/macOS)
       if: runner.os != 'Windows'  
@@ -197,7 +197,7 @@ jobs:
         framework: [react, vue, angular, node, python]
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Setup Node.js
       if: matrix.framework != 'python'
@@ -324,7 +324,7 @@ jobs:
     if: always()
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       
     - name: Generate Compatibility Report
       run: |
