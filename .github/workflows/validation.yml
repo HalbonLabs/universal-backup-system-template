@@ -81,7 +81,7 @@ jobs:
         ./scripts/performance-monitor.ps1 -MetricType "system" -SaveReport
         
     - name: Upload Performance Report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: always()
       with:
         name: performance-report-${{ matrix.os }}
@@ -371,7 +371,7 @@ jobs:
         EOF
         
     - name: Upload Compatibility Report
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: compatibility-report
         path: compatibility-report.md

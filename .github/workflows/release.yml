@@ -229,7 +229,7 @@ jobs:
         Write-Host "✅ Release package created: $releaseDir.zip" -ForegroundColor Green
         
     - name: Upload Release Assets
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: release-assets
         path: universal-backup-system-*.zip
